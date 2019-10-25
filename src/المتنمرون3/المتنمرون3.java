@@ -11,6 +11,16 @@ import java.util.Scanner;
  * @author DELL
  */
 public class المتنمرون3 {
+    
+    public static double max(double[] list) {
+		double max = list[0];
+
+		for (int i = 1; i < list.length; i++) {
+			if (list[i] > max)
+				max = list[i];
+		}
+		return max;
+	}
 
     /**
      * @param args the command line arguments
@@ -31,7 +41,8 @@ System.out.println("\n");
                 System.out.println("The ArrayList:- ");
                 for (int i = 0; i < numbers.length; i++)
                 {System.out.println(numbers[i]);}
-                           
-                   System.out.println("\n");
+                
+                    System.out.println("\n");
+                   System.out.println("The maxmum number is " + max(numbers));
 }
 }
