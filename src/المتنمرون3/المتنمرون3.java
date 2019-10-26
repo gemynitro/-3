@@ -21,6 +21,20 @@ public class المتنمرون3 {
 		}
 		return max;
 	}
+    public static int indexOfSmallestElement(double[] array) {
+		if (array.length <= 1)
+			return 0;
+		
+		double min = array[0];
+		int minimumIndex = 0;
+		for (int i = 1; i < array.length; i++) {
+			if (array[i] < min) {
+				min = array[i];
+				minimumIndex = i;
+			}
+		}
+		return minimumIndex;
+	}
 
     /**
      * @param args the command line arguments
@@ -43,6 +57,9 @@ System.out.println("\n");
                 {System.out.println(numbers[i]);}
                 
                     System.out.println("\n");
-                   System.out.println("The maxmum number is " + max(numbers));
+            System.out.println("The maxmum number is " + max(numbers));
+            System.out.println("The minimum number is " + 
+                numbers[indexOfSmallestElement(numbers)] + " index " +
+			indexOfSmallestElement(numbers));
 }
 }
